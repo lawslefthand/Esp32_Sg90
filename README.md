@@ -12,7 +12,7 @@ servo_swerve() - Provides servo swerve from 0 to 180 degrees and back. Each move
 servo_pos(int pos) - You can set a custom position for the sg90 from 0 to 180 degrees. 
                       Pos can be from 1-11.
                       Each Pos value corresponds to a different duty cycle value.
-                      You can check the table for them in values.xslx.
+                      You can check the table for them in values.xlsx
 
 
 Refrence for Sg90 pwm values - 
