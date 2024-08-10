@@ -1,4 +1,4 @@
-#Esp32 SG90 Driver
+#Esp32_SG90_Driver
 A simple driver which provides swerve and positional functions for the Sg90 servo.
 
 How to use -
