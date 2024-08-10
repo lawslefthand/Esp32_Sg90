@@ -4,7 +4,7 @@ How to use -
 
 This driver is meant for the Esp-IDF.
 
-Simply include the source and header files into your project's main directory.
+Simply include the source and header files into your project's main directory. Dont forget to add sg90.c into your project's Cmake file.
 
 
 functions- 
