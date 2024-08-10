@@ -1,9 +1,11 @@
-
 A simple driver which provides swerve and positional functions for the Sg90 servo.
 
 How to use -
 
+This driver is meant for the Esp-IDF.
+
 Simply include the source and header files into your project's main directory.
+
 
 functions- 
 
