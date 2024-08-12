@@ -80,7 +80,7 @@ static void servo_pos(int pos)
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==6) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 614);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 600);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==7) 
 	{
