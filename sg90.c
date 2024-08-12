@@ -1,4 +1,3 @@
-
 static const char TAG[8] = "pwm_tag";
 
 static void servo_init(void)
@@ -25,28 +24,26 @@ static void servo_init(void)
     };
     ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel));
 }
-
 static void servo_swerve(void)
 {
 	servo_init();
 	static int servo_duty = 409;
 	while(1)
 	{
-	while(servo_duty <= 819.2)
+	while(servo_duty <= 3277)
 	{
 		
 		servo_duty++;
 		ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, servo_duty);
 		ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
-		vTaskDelay(10/portTICK_PERIOD_MS);
+
 		ESP_LOGI(TAG,"0-180 sweep");
 	}
-	while(servo_duty>=409)
+	while(servo_duty>=1638)
 	{
 		servo_duty--;
 		ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, servo_duty);
 		ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
-		vTaskDelay(10/portTICK_PERIOD_MS);
 		ESP_LOGI(TAG,"180-0 sweep");
 	}
 	}
@@ -58,49 +55,49 @@ static void servo_pos(int pos)
 	servo_init();
 	if(pos==1)
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 407);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 1638);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);	
 	}
 	else if (pos==2) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 451);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 1802);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}
 	else if (pos==3) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 492);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 1966);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==4) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 532);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 2130);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==5) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 573);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 2294);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==6) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 600);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 2458);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==7) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 655);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 2621);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==8) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 696);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 2785);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==9) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 737);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 2949);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==10) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 778);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 3113);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}else if (pos==11) 
 	{
-	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 819);
+	ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, 3277);
 	ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);		
 	}
 	else
@@ -110,4 +107,3 @@ static void servo_pos(int pos)
 
 
 }
-
