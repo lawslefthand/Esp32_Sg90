@@ -18,8 +18,8 @@
 #define LEDC_OUTPUT_IO          (5) // Define the output GPIO
 #define LEDC_CHANNEL            LEDC_CHANNEL_0
 #define LEDC_DUTY_RES           LEDC_TIMER_13_BIT // Set duty resolution to 13 bits
-#define LEDC_DUTY               (819) // Set duty to 50%. (2 ** 13) * 50% = 4096
-#define LEDC_FREQUENCY          (50) // Frequency in Hertz. Set frequency at 4 kHz
+#define LEDC_DUTY               (600) // Set duty to 50%. (2 ** 13) * 50% = 4096
+#define LEDC_FREQUENCY          (50) // Frequency in Hertz. 
 
 void servo_init(void);
 void servo_swerve(void);
