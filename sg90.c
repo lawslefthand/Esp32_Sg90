@@ -52,7 +52,7 @@ static const char TAG[8] = "pwm_tag";
 	
 }
 
-static void servo_pos(int pos)
+void servo_pos(int pos)
 {
 	servo_init();
 	if(pos==1)
