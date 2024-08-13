@@ -24,7 +24,7 @@
 
 void servo_init(void);
 void servo_swerve(void);
-void servo_angle(int pos);
+void servo_pos(int pos);
 
 
 #endif 
