@@ -1,6 +1,8 @@
+#include "sg90.h"
+
 static const char TAG[8] = "pwm_tag";
 
-static void servo_init(void)
+ void servo_init(void)
 {
     
     ledc_timer_config_t ledc_timer = {
@@ -24,7 +26,7 @@ static void servo_init(void)
     };
     ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel));
 }
-static void servo_swerve(void)
+ void servo_swerve(void)
 {
 	servo_init();
 	static int servo_duty = 409;
