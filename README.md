@@ -22,6 +22,9 @@ Ps- Pos 1 corresponds to 0 degrees and Pos 20 corresponds to 180 degrees. You ca
 
 Refrence for Sg90 pwm values - 
 
+![image](https://github.com/user-attachments/assets/cb0d8543-5de2-4c53-ad3f-c9a088a96417)
+
+
 
 ![image](https://github.com/user-attachments/assets/990adc11-f007-46b0-a9a2-4d2243caaaad)
 
