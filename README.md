@@ -15,12 +15,12 @@ Allows setting the servo to a specific position between 0 and 180 degrees.
 The pos parameter ranges from 1 to 20, with each value corresponding to a different PWM duty cycle.
 
 
-You can refer to the values.xlsx file for a detailed table of PWM values for both 13-bit and 15-bit resolution.
+
 Note:
 
 Position 1 corresponds to 0 degrees, and position 20 corresponds to 180 degrees. You can fine-tune these values in the sg90.c file to match the characteristics of your specific servo.
 
-For detailed reference on PWM values, check out the values.xlsx file included in the project.
+You can refer to the values.xlsx file for a detailed table of PWM values for both 13-bit and 15-bit resolution.
 
 Example code-
 ```
