@@ -22,7 +22,38 @@ Position 1 corresponds to 0 degrees, and position 20 corresponds to 180 degrees.
 PWM Values Reference
 For detailed reference on PWM values, check out the values.xlsx file included in the project.
 
+Example code-
+```
+#include <stdint.h>
+#include <stdlib.h>
+#include "freertos/FreeRTOS.h"
+#include "sg90.h"
 
+
+
+void task(void *arg)
+{
+	servo_init();
+	 while(1)
+	 {
+       servo_swerve();
+       servo_pos(12);
+       
+     }
+}
+
+
+
+void app_main(void)
+{
+    
+    xTaskCreatePinnedToCore(&task, "test", 4092*2, NULL, 5, NULL, 1);
+    
+    
+}
+```
+
+Refrence image-
 
 
 ![image](https://github.com/user-attachments/assets/cb0d8543-5de2-4c53-ad3f-c9a088a96417)
