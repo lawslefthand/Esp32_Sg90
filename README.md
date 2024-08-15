@@ -1,18 +1,20 @@
 This driver provides functions to control the SG90 servo motor, offering both sweeping and positional control. Designed specifically for use with the ESP-IDF framework, it integrates seamlessly into your projects.
 
-How to Use
-Integration:
 
 Include both the sg90.c and sg90.h files in your project's main directory.
 Make sure to add sg90.c to your project's CMakeLists.txt to ensure it compiles with your other source files.
+
 Functions:
 
-servo_swerve():
+*servo_swerve():
 Sweeps the SG90 servo motor from 0 to 180 degrees and back.
 Each movement has a 10ms delay, providing smooth motion.
-servo_pos(int pos):
+
+*servo_pos(int pos):
 Allows setting the servo to a specific position between 0 and 180 degrees.
 The pos parameter ranges from 1 to 20, with each value corresponding to a different PWM duty cycle.
+
+
 You can refer to the values.xlsx file for a detailed table of PWM values for both 13-bit and 15-bit resolution.
 Note:
 
